@@ -1,5 +1,30 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/player.gd" type="Script" id=1]
+[ext_resource path="res://sprites/red.png" type="Texture" id=2]
 
 [node name="Toni" type="Node"]
 
-[node name="Player" type="Node" parent="."]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 512, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 32, 32 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+current = true
+zoom = Vector2( 0.2, 0.2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 464.0
+margin_top = 256.0
+margin_right = 504.0
+margin_bottom = 296.0
+text = "Test"
