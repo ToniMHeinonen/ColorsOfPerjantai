@@ -16,13 +16,11 @@ _global_script_class_icons={
 [application]
 
 config/name="ColorsOfPerjantai"
-run/main_scene="res://Player.tscn"
+run/main_scene="res://Toni.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/test_width=1920
-window/size/test_height=1080
 window/dpi/allow_hidpi=true
 
 [rendering]
